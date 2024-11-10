@@ -1,1 +1,72 @@
+/* Reset and basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', Arial, sans-serif;
+}
 
+/* Full-Screen Banner */
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.banner h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Mongolian Baiti', Arial, sans-serif;
+}
+
+.banner input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    font-size: 1rem;
+    border: 2px solid #333;
+    border-radius: 5px;
+}
+
+/* Databank Section */
+.databank {
+    background-color: #f0f0f0;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.databank h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-family: 'Mongolian Baiti', Arial, sans-serif;
+}
+
+.databank p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Image Links */
+.image-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.image-links a img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.image-links a img:hover {
+    transform: scale(1.05);
+}
