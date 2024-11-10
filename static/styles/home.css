@@ -21,6 +21,7 @@
     color: #000000;
     padding-bottom: 0%;
     font-family: 'Mongolian Baiti', Arial, sans-serif;
+
 }
 
 .banner input[type="text"] {
@@ -29,7 +30,11 @@
     width: 300px;
     font-size: 1rem;
     border: 2px solid #000000;
-    border-radius: 5px;
+    border-radius: 100px;
+}
+.banner input[type="text"]::placeholder {
+    font-style: italic;
+    color: #999; /* Optional: lighter color for the placeholder text */
 }
 
 /* Databank Section */
