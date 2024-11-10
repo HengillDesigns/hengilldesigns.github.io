@@ -79,3 +79,26 @@
 .image-links a img:hover {
     transform: scale(1.05);
 }
+/* Gallery Section */
+.gallery {
+    background-color: #000000;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    text-align: left;
+    font-family: 'Mongolian Baiti', Arial, sans-serif;
+}
+
+.gallery p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-left: 30px;
+    text-align: left;
+    margin-bottom: 40px;
+}
