@@ -1,3 +1,4 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -19,9 +20,7 @@
 .banner h1 {
     font-size: 4rem;
     color: #000000;
-    padding-bottom: 0%;
     font-family: 'Mongolian Baiti', Arial, sans-serif;
-
 }
 
 .banner input[type="text"] {
@@ -32,16 +31,18 @@
     border: 2px solid #000000;
     border-radius: 100px;
 }
+
 .banner input[type="text"]::placeholder {
     font-style: italic;
-    color: #999; /* Optional: lighter color for the placeholder text */
+    color: #999;
 }
 
 /* Databank Section */
 .databank {
     background-color: #f0f0f0;
     padding: 50px 0;
-    text-align: center;
+    text-align: left;
+    width: 100%;  /* Full width */
 }
 
 .databank h2 {
@@ -49,7 +50,6 @@
     color: #000000;
     margin-bottom: 10px;
     margin-left: 30px;
-    text-align: left;
     font-family: 'Mongolian Baiti', Arial, sans-serif;
 }
 
@@ -57,21 +57,23 @@
     font-size: 1.2rem;
     color: #666;
     margin-left: 30px;
-    text-align: left;
     margin-bottom: 40px;
 }
 
-/* Image Links */
 .image-links {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    width: 80%;
+    grid-template-columns: repeat(3, 1fr); /* Keeps the 3-column layout */
+    padding: 0 20px;
+    width: 100%;
     margin: 0 auto;
+    gap: 10px; /* Reduce gap to make images closer */
 }
 
+
+/* Image Links with Decreased Image Margin */
 .image-links a img {
     width: 100%;
+    max-width: 450px;
     border-radius: 10px;
     transition: transform 0.3s;
 }
@@ -79,11 +81,14 @@
 .image-links a img:hover {
     transform: scale(1.05);
 }
+
 /* Gallery Section */
 .gallery {
     background-color: #000000;
     padding: 50px 0;
-    text-align: center;
+    text-align: left;
+    font-family: 'Mongolian Baiti', Arial, sans-serif; /* Ensure the gallery uses Mongolian Baiti font */
+    width: 100%; /* Full width */
 }
 
 .gallery h2 {
@@ -91,7 +96,6 @@
     color: #ffffff;
     margin-bottom: 10px;
     margin-left: 30px;
-    text-align: left;
     font-family: 'Mongolian Baiti', Arial, sans-serif;
 }
 
@@ -99,6 +103,61 @@
     font-size: 1.2rem;
     color: #666;
     margin-left: 30px;
-    text-align: left;
     margin-bottom: 40px;
+}
+
+/* Gallery Images */
+.gallery-images {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-wrap: wrap; /* Wrap images when necessary */
+    padding: 20px;
+    width: 100%; /* Full width for gallery images */
+    margin: 0 auto;
+}
+
+.gallery-images img {
+    flex: 1 1 45%; /* Ensures images take up 45% of the container, and wraps properly */
+    min-width: 300px; /* Ensures images do not become too small */
+    max-width: 500px; /* Ensures images do not become too large */
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery-images img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 1450px) {
+    /* On medium screens, stack the images in 2 columns */
+    .image-links {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
+
+    .gallery-images img {
+        width: 100%; /* Makes images stack vertically */
+        min-width: 450px; /* Prevents them from getting too small */
+    }
+}
+
+@media (max-width: 900px) {
+    /* On smaller screens, stack the images in 1 column */
+    .image-links {
+        grid-template-columns: 1fr; /* 1 column */
+    }
+}
+
+@media (max-width: 1000px) {
+    .gallery-images img {
+        width: 100%; /* Stack images vertically */
+    }
+}
+
+.sitemap h2 {
+    text-align: center;
+    padding-top: 20px;
+    font-family: 'Mongolian Baiti';
+    font-size: 2.5rem;
 }
