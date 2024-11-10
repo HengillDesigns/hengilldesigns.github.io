@@ -38,7 +38,6 @@
             letter-spacing: -4px; /* Adjusted letter spacing */
         }
 
-
         /* Message Text */
         .error-message {
             font-size: 1.2rem;
@@ -46,7 +45,20 @@
             margin-top: 10px;
             margin-bottom: 20px;
         }
-        
+
+        /* Button Styling */
+        .btn {
+            display: inline-block; /* Ensure the button is treated as inline-block */
+            text-decoration: none; /* Remove underline from the link */
+        }
+
+        .btn img {
+            transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
+        }
+
+        .btn:hover img {
+            transform: scale(1.05); /* Apply scaling on image hover */
+        }
     </style>
 </head>
 <body>
@@ -54,9 +66,8 @@
 
     <div class="error-title">aw shucks.</div>
     <p class="error-message">The requested resource was not found on this server.</p>
-    <a href="/">
+    <a href="/" class="btn">
         <img id="btn" src="static/media/Return.png" alt="Go Home" style="width: 275px; height: 50px;">
     </a>
-    
 </body>
 </html>
