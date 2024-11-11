@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
 /* Reset */
 * {
     margin: 0;
@@ -15,149 +17,124 @@
     height: 80vh;
     background-color: #ffffff;
     text-align: center;
+    gap: 0.5rem; /* Reduces space between h1 elements */
 }
 
 .banner h1 {
-    font-size: 4rem;
+    font-size: 5rem; /* Increased to 5rem */
     color: #000000;
-    font-family: 'Mongolian Baiti', Arial, sans-serif;
+    font-family: 'Amiri', serif;
+    line-height: 1; /* Closer line spacing */
 }
 
 .banner input[type="text"] {
-    padding: 8px;
-    margin-top: 1%;
-    width: 300px;
+    padding: 6px 12px;
+    margin-top: 0.5rem;
+    width: 280px;
     font-size: 1rem;
     border: 2px solid #000000;
     border-radius: 100px;
 }
 
-.banner input[type="text"]::placeholder {
-    font-style: italic;
-    color: #999;
-}
-
 /* Databank Section */
 .databank {
     background-color: #f0f0f0;
-    padding: 50px 0;
+    padding: 40px 0;
     text-align: left;
-    width: 100%;  /* Full width */
+    width: 100%;
 }
 
 .databank h2 {
     font-size: 2rem;
     color: #000000;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     margin-left: 30px;
-    font-family: 'Mongolian Baiti', Arial, sans-serif;
+    font-family: 'Amiri', serif;
+    line-height: 1.2;
 }
 
 .databank p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #666;
     margin-left: 30px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    line-height: 1.2;
 }
 
 .image-links {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Keeps the 3-column layout */
+    grid-template-columns: repeat(3, 1fr);
     padding: 0 20px;
+    gap: 8px; /* Reduced gap between images */
     width: 100%;
     margin: 0 auto;
-    gap: 10px; /* Reduce gap to make images closer */
 }
 
-
-/* Image Links with Decreased Image Margin */
 .image-links a img {
     width: 100%;
     max-width: 450px;
     border-radius: 10px;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease; /* Smooth hover effect */
 }
 
 .image-links a img:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Restored zoom effect on hover */
 }
 
 /* Gallery Section */
 .gallery {
     background-color: #000000;
-    padding: 50px 0;
-    text-align: left;
-    font-family: 'Mongolian Baiti', Arial, sans-serif; /* Ensure the gallery uses Mongolian Baiti font */
-    width: 100%; /* Full width */
+    padding: 40px 0;
+    color: #ffffff;
+    width: 100%;
 }
 
 .gallery h2 {
     font-size: 2rem;
     color: #ffffff;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     margin-left: 30px;
-    font-family: 'Mongolian Baiti', Arial, sans-serif;
+    font-family: 'Amiri', serif;
+    line-height: 1.2;
 }
 
 .gallery p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #666;
     margin-left: 30px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    line-height: 1.2;
 }
 
-/* Gallery Images */
 .gallery-images {
-    display: flex;
-    justify-content: flex-start;
-    gap: 20px;
-    flex-wrap: wrap; /* Wrap images when necessary */
-    padding: 20px;
-    width: 100%; /* Full width for gallery images */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Matches Databank's 3-column layout */
+    gap: 8px; /* Reduced gap for tighter layout */
+    padding: 0 20px;
+    width: 100%;
     margin: 0 auto;
 }
 
 .gallery-images img {
-    flex: 1 1 45%; /* Ensures images take up 45% of the container, and wraps properly */
-    min-width: 300px; /* Ensures images do not become too small */
-    max-width: 500px; /* Ensures images do not become too large */
+    width: 100%;
+    max-width: 450px;
     border-radius: 10px;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease; /* Smooth hover effect */
 }
 
 .gallery-images img:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Restored zoom effect on hover */
 }
 
-/* Responsive Design for Smaller Screens */
+/* Responsive Design */
 @media (max-width: 1450px) {
-    /* On medium screens, stack the images in 2 columns */
-    .image-links {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    }
-
-    .gallery-images img {
-        width: 100%; /* Makes images stack vertically */
-        min-width: 450px; /* Prevents them from getting too small */
+    .image-links, .gallery-images {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 900px) {
-    /* On smaller screens, stack the images in 1 column */
-    .image-links {
-        grid-template-columns: 1fr; /* 1 column */
+    .image-links, .gallery-images {
+        grid-template-columns: 1fr;
     }
-}
-
-@media (max-width: 1000px) {
-    .gallery-images img {
-        width: 100%; /* Stack images vertically */
-    }
-}
-
-.sitemap h2 {
-    text-align: center;
-    padding-top: 20px;
-    font-family: 'Mongolian Baiti';
-    font-size: 2.5rem;
 }
