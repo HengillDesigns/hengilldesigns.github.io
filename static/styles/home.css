@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Inter:wght@300;400;600;700&display=swap');
 
-/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +7,10 @@
     font-family: 'Inter', Arial, sans-serif;
 }
 
-/* Full-Screen Banner */
+.body {
+    user-select: none;
+}
+
 .banner {
     display: flex;
     flex-direction: column;
@@ -17,14 +19,17 @@
     height: 80vh;
     background-color: #ffffff;
     text-align: center;
-    gap: 0.5rem; /* Reduces space between h1 elements */
+    gap: 0.5rem;
+    user-select: none;
 }
 
 .banner h1 {
-    font-size: 5rem; /* Increased to 5rem */
+    font-size: 5rem;
     color: #000000;
     font-family: 'Amiri', serif;
-    line-height: 1; /* Closer line spacing */
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -5px;
 }
 
 .banner input[type="text"] {
@@ -36,12 +41,12 @@
     border-radius: 100px;
 }
 
-/* Databank Section */
 .databank {
     background-color: #f0f0f0;
     padding: 40px 0;
     text-align: left;
     width: 100%;
+    user-select: none;
 }
 
 .databank h2 {
@@ -59,13 +64,14 @@
     margin-left: 30px;
     margin-bottom: 20px;
     line-height: 1.2;
+    font-weight: 300;
 }
 
 .image-links {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 0 20px;
-    gap: 8px; /* Reduced gap between images */
+    gap: 8px;
     width: 100%;
     margin: 0 auto;
 }
@@ -74,19 +80,19 @@
     width: 100%;
     max-width: 450px;
     border-radius: 10px;
-    transition: transform 0.3s ease; /* Smooth hover effect */
+    transition: transform 0.3s ease;
 }
 
 .image-links a img:hover {
-    transform: scale(1.05); /* Restored zoom effect on hover */
+    transform: scale(1.05);
 }
 
-/* Gallery Section */
 .gallery {
     background-color: #000000;
     padding: 40px 0;
     color: #ffffff;
     width: 100%;
+    user-select: none;
 }
 
 .gallery h2 {
@@ -104,12 +110,13 @@
     margin-left: 30px;
     margin-bottom: 20px;
     line-height: 1.2;
+    font-weight: 300;
 }
 
 .gallery-images {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Matches Databank's 3-column layout */
-    gap: 8px; /* Reduced gap for tighter layout */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
     padding: 0 20px;
     width: 100%;
     margin: 0 auto;
@@ -119,14 +126,13 @@
     width: 100%;
     max-width: 450px;
     border-radius: 10px;
-    transition: transform 0.3s ease; /* Smooth hover effect */
+    transition: transform 0.3s ease;
 }
 
 .gallery-images img:hover {
-    transform: scale(1.05); /* Restored zoom effect on hover */
+    transform: scale(1.05);
 }
 
-/* Responsive Design */
 @media (max-width: 1450px) {
     .image-links, .gallery-images {
         grid-template-columns: repeat(2, 1fr);
@@ -137,4 +143,62 @@
     .image-links, .gallery-images {
         grid-template-columns: 1fr;
     }
+}
+
+.sitemap {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    user-select: none;
+}
+
+.sitemap h2 {
+    font-size: 45px;
+    font-family: 'Amiri', sans-serif;
+    margin-left: 30px;
+    margin-top: 30px;
+    font-weight: 400;
+}
+
+.sitemap p1 {
+    font-size: 25px;
+    font-family: 'Inter', serif;
+    margin-left: 30px;
+    color: #939393;
+    font-weight: 300;
+}
+
+.sitemap hr {
+    width: auto;
+    margin-left: 20px;
+    margin-right: 30px;
+    margin-top: 20px;
+    height: 3px;
+    color: #939393;
+    background-color: #939393;
+}
+
+.logos-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.hengill-logo {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.polylogue-logo {
+    margin-top: 30px;
+}
+
+.logos-container a img {
+    width: 130px;
+    height: auto;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.logos-container a:hover img {
+    transform: scale(1.1);
+    opacity: 0.8;
 }
