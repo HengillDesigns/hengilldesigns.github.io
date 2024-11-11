@@ -24,7 +24,7 @@
 }
 
 .banner h1 {
-    font-size: 5rem;
+    font-size: 6rem;
     color: #000000;
     font-family: 'Amiri', serif;
     font-weight: 400;
@@ -50,7 +50,7 @@
 }
 
 .databank h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #000000;
     margin-bottom: 5px;
     margin-left: 30px;
@@ -59,7 +59,7 @@
 }
 
 .databank p {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     color: #666;
     margin-left: 30px;
     margin-bottom: 20px;
@@ -96,7 +96,7 @@
 }
 
 .gallery h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #ffffff;
     margin-bottom: 5px;
     margin-left: 30px;
@@ -105,7 +105,7 @@
 }
 
 .gallery p {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     color: #666;
     margin-left: 30px;
     margin-bottom: 20px;
@@ -167,6 +167,14 @@
     font-weight: 300;
 }
 
+.sitemap p2 {
+    font-size: 20px;
+    font-family: 'Inter', serif;
+    margin-left: 30px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
 .sitemap hr {
     width: auto;
     margin-left: 20px;
@@ -187,18 +195,20 @@
     margin-top: 10px;
     margin-left: 20px;
 }
-
 .polylogue-logo {
-    margin-top: 30px;
+    margin-top: 22px;
 }
 
 .logos-container a img {
-    width: 130px;
-    height: auto;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .logos-container a:hover img {
     transform: scale(1.1);
     opacity: 0.8;
+}
+
+.btnView {
+    margin-top:20px;
+    margin-left: 15px;
 }
