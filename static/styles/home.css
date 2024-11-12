@@ -5,7 +5,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Inter', Arial, sans-serif;
-    cursor: none;
 }
 
 .body {
@@ -209,7 +208,7 @@
 }
 
 .sitemap p1 {
-    font-size: 25px;
+    font-size: 23px;
     font-family: 'Inter', serif;
     margin-left: 37.5px; 
     color: #939393;
@@ -219,7 +218,7 @@
 }
 
 .sitemap p2 {
-    font-size: 25px; 
+    font-size: 20px; 
     font-family: 'Inter', serif;
     margin-left: 37.5px; 
     margin-top: 25px; 
@@ -260,26 +259,3 @@
     opacity: 0.8;
 }
 
-.custom-cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: rgba(150, 150, 150, 0.6);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(3px);
-    pointer-events: none;
-    transition: width 0.2s ease, height 0.2s ease, transform 0.2s ease, border-radius 0.2s ease;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
-}
-
-/* Change cursor style on interactive elements */
-button:hover ~ .custom-cursor,
-a:hover ~ .custom-cursor {
-    border-radius: 12px;
-    background-color: rgba(100, 100, 100, 0.6);
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
-}
