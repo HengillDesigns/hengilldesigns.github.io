@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Inter', Arial, sans-serif;
+    cursor: none;
 }
 
 .body {
@@ -19,19 +20,22 @@
     height: 80vh;
     background-color: #ffffff;
     text-align: center;
-    position: relative; /* This allows the arrow to be positioned within the banner */
+    position: relative;
 }
 
 .arrow {
-    font-size: 3rem;  /* Adjust size as needed */
-    color: #000000;   /* Adjust color to match design */
+    font-size: 3rem; 
+    color: #000000;
     cursor: pointer;
-    position: absolute; /* Absolute positioning */
-    bottom: 20px; /* Adjust distance from the bottom */
-    right: 20px; /* Adjust distance from the right */
+    position: absolute; 
+    bottom: 20px; 
+    right: 20px;
     animation: bounce 1.5s infinite;
     user-select: none;
     margin-right:10px;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 1000px;
 }
 
 @keyframes bounce {
@@ -48,20 +52,20 @@
 
 
 .banner h1 {
-    font-size: 9.375rem; /* Increased by 25% */
+    font-size: 9.375rem;
     color: #000000;
     font-family: 'Amiri', serif;
     font-weight: 400;
     line-height: 1;
-    letter-spacing: -11.25px; /* Increased by 25% */
+    letter-spacing: -11.25px; 
 }
 
 .banner input[type="text"] {
-    padding: 7.5px 15px; /* Increased padding by 25% */
-    margin-top: 1.25rem; /* Increased by 25% */
-    width: 455px; /* Increased by 25% */
-    height: 70px; /* Increased by 25% */
-    font-size: 1.25rem; /* Increased by 25% */
+    padding: 7.5px 15px; 
+    margin-top: 1.25rem; 
+    width: 455px;
+    height: 70px; 
+    font-size: 1.25rem; 
     background-image: url("/static/media/searchbar.png");
     background-size: 100% 100%;
     background-position: center;
@@ -71,7 +75,7 @@
     color: #FFFFFF;
     outline: none;
     font-family: 'Inter', sans-serif;
-    text-indent: 53.75px; /* Increased by 25% */
+    text-indent: 53.75px; 
 }
 
 .banner input[type="text"]:focus {
@@ -85,26 +89,26 @@
 
 .databank {
     background-color: #f0f0f0;
-    padding: 50px 0; /* Increased by 25% */
+    padding: 50px 0; 
     text-align: left;
     width: 100%;
     user-select: none;
 }
 
 .databank h2 {
-    font-size: 3.125rem; /* Increased by 25% */
+    font-size: 3.125rem; 
     color: #000000;
-    margin-bottom: 6.25px; /* Increased by 25% */
-    margin-left: 37.5px; /* Increased by 25% */
+    margin-bottom: 6.25px; 
+    margin-left: 37.5px; 
     font-family: 'Amiri', serif;
     line-height: 1.2;
 }
 
 .databank p {
-    font-size: 1.625rem; /* Increased by 25% */
+    font-size: 1.625rem; 
     color: #666;
-    margin-left: 37.5px; /* Increased by 25% */
-    margin-bottom: 25px; /* Increased by 25% */
+    margin-left: 37.5px; 
+    margin-bottom: 25px; 
     line-height: 1.2;
     font-weight: 300;
 }
@@ -112,16 +116,16 @@
 .image-links {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 0 25px; /* Increased by 25% */
-    gap: 10px; /* Increased by 25% */
+    padding: 0 25px; 
+    gap: 10px; 
     width: 100%;
     margin: 0 auto;
 }
 
 .image-links a img {
     width: 100%;
-    max-width: 562.5px; /* Increased by 25% */
-    border-radius: 12.5px; /* Increased by 25% */
+    max-width: 562.5px; 
+    border-radius: 12.5px;
     transition: transform 0.3s ease;
 }
 
@@ -131,26 +135,26 @@
 
 .gallery {
     background-color: #000000;
-    padding: 50px 0; /* Increased by 25% */
+    padding: 50px 0;
     color: #ffffff;
     width: 100%;
     user-select: none;
 }
 
 .gallery h2 {
-    font-size: 3.125rem; /* Increased by 25% */
+    font-size: 3.125rem;
     color: #ffffff;
-    margin-bottom: 6.25px; /* Increased by 25% */
-    margin-left: 37.5px; /* Increased by 25% */
+    margin-bottom: 6.25px;
+    margin-left: 37.5px; 
     font-family: 'Amiri', serif;
     line-height: 1.2;
 }
 
 .gallery p {
-    font-size: 1.625rem; /* Increased by 25% */
+    font-size: 1.625rem;
     color: #666;
-    margin-left: 37.5px; /* Increased by 25% */
-    margin-bottom: 25px; /* Increased by 25% */
+    margin-left: 37.5px;
+    margin-bottom: 25px; 
     line-height: 1.2;
     font-weight: 300;
 }
@@ -158,16 +162,16 @@
 .gallery-images {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px; /* Increased by 25% */
-    padding: 0 25px; /* Increased by 25% */
+    gap: 10px; 
+    padding: 0 25px; 
     width: 100%;
     margin: 0 auto;
 }
 
 .gallery-images img {
     width: 100%;
-    max-width: 562.5px; /* Increased by 25% */
-    border-radius: 12.5px; /* Increased by 25% */
+    max-width: 562.5px; 
+    border-radius: 12.5px;
     transition: transform 0.3s ease;
 }
 
@@ -195,19 +199,19 @@
 
 .sitemap h2 {
     margin-top: 50px;
-    font-size: 50.25px; /* Increased by 25% */
+    font-size: 50.25px; 
     font-family: 'Amiri', sans-serif;
-    margin-left: 37.5px; /* Increased by 25% */
-    margin-top: 30px; /* Increased by 25% */
+    margin-left: 37.5px; 
+    margin-top: 30px; 
     font-weight: 300;
     letter-spacing: -2px;
     line-height: 45px;
 }
 
 .sitemap p1 {
-    font-size: 25px; /* Increased by 25% */
+    font-size: 25px;
     font-family: 'Inter', serif;
-    margin-left: 37.5px; /* Increased by 25% */
+    margin-left: 37.5px; 
     color: #939393;
     font-weight: 300;
     letter-spacing: -1px;
@@ -215,19 +219,19 @@
 }
 
 .sitemap p2 {
-    font-size: 25px; /* Increased by 25% */
+    font-size: 25px; 
     font-family: 'Inter', serif;
-    margin-left: 37.5px; /* Increased by 25% */
-    margin-top: 25px; /* Increased by 25% */
+    margin-left: 37.5px; 
+    margin-top: 25px; 
     display: inline-block;
 }
 
 .sitemap hr {
     width: auto;
-    margin-left: 25px; /* Increased by 25% */
-    margin-right: 37.5px; /* Increased by 25% */
-    margin-top: 25px; /* Increased by 25% */
-    height: 3px; /* Increased by 25% */
+    margin-left: 25px; 
+    margin-right: 37.5px; 
+    margin-top: 25px; 
+    height: 3px; 
     color: #c2c2c2;
     border: none;
     background-color: #c2c2c2;
@@ -241,10 +245,10 @@
 
 .hengill-logo {
     margin-top: 10.5px;
-    margin-left: 25px;
+    margin-left: 31px;
 }
 .polylogue-logo {
-    margin-top: 27.5px;
+    margin-top: 21px;
 }
 
 .logos-container a img {
@@ -256,4 +260,26 @@
     opacity: 0.8;
 }
 
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(150, 150, 150, 0.6);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    pointer-events: none;
+    transition: width 0.2s ease, height 0.2s ease, transform 0.2s ease, border-radius 0.2s ease;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
 
+/* Change cursor style on interactive elements */
+button:hover ~ .custom-cursor,
+a:hover ~ .custom-cursor {
+    border-radius: 12px;
+    background-color: rgba(100, 100, 100, 0.6);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+}
