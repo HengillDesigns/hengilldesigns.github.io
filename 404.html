@@ -41,17 +41,24 @@
         const currentPath = window.location.pathname;
         const iframe = document.getElementById("errorFrame");
 
-        if (forbiddenPaths.includes(currentPath)) {
-            iframe.src = "/static/error/403.html";
-            document.title = "403 - Forbidden";
-            // Update the parent document's location to match the iframe's URL
-            window.location = iframe.src;
-        } else {
-            iframe.src = "/static/error/404.html";
-            document.title = "404 - Not Found";
-            // Update the parent document's location to match the iframe's URL
-            window.location = iframe.src;
+        // Function to change iframe src and parent URL
+        function changeIframeSrc(src, title) {
+            iframe.src = src;
+            document.title = title;
+            // Update the parent page's location (URL) to the iframe's src
+            window.history.pushState(null, "", src);
         }
+        if (forbiddenPaths.includes(currentPath)) {
+            changeIframeSrc("/static/error/403.html", "403 - Forbidden");
+        } else {
+            changeIframeSrc("/static/error/404.html", "404 - Not Found");
+        }
+
+        iframe.onload = function() {
+            if (iframe.src.includes("projectninjago.net")) {
+                window.history.pushState(null, "", iframe.src);
+            }
+        };
     </script>
     <p>powered by <strong>errorstatic</strong></p>
 </body>
