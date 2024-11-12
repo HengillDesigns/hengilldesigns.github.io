@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ErrorStatic Handler</title>
+    <title>Page Error | errorstatic</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@400;700&family=Roboto+Mono:wght@100;400;700&display=swap');
         html, body {
@@ -40,12 +40,17 @@
         ];
         const currentPath = window.location.pathname;
         const iframe = document.getElementById("errorFrame");
+
         if (forbiddenPaths.includes(currentPath)) {
             iframe.src = "/static/error/403.html";
             document.title = "403 - Forbidden";
+            // Update the parent document's location to match the iframe's URL
+            window.location = iframe.src;
         } else {
             iframe.src = "/static/error/404.html";
             document.title = "404 - Not Found";
+            // Update the parent document's location to match the iframe's URL
+            window.location = iframe.src;
         }
     </script>
     <p>powered by <strong>errorstatic</strong></p>
