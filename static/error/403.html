@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>403 - Forbidden</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            background-color: #f4f4f4;
+            color: #000000;
+        }
+        .error-image {
+            margin-bottom: 20px;
+            width: 300px;
+        }
+
+        .error-title {
+            font-family: 'Mongolian Baiti';
+            font-size: 4.5rem;
+            color: #000000;
+            margin-bottom: 10px;
+            letter-spacing: -4px;
+        }
+
+        /* Message Text */
+        .error-message {
+            font-size: 1.2rem;
+            color: #666;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Button Styling */
+        .btn {
+            display: inline-block;
+            text-decoration: none; 
+            margin-top: 15px;
+        }
+
+        .btn img {
+            transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
+        }
+
+        .btn:hover img {
+            transform: scale(1.05); /* Apply scaling on image hover */
+        }
+    </style>
+</head>
+<body>
+    <img src="/static/media/403.png" alt="404" class="error-image">
+
+    <div class="error-title">gee whizz!</div>
+    <p class="error-message">The requested resource is forbidden.</p>
+    <a href="/" class="btn">
+        <img id="btn" src="/static/media/Return.png" alt="Go Home" style="width: 275px; height: 50px;">
+    </a>
+</body>
+</html>
