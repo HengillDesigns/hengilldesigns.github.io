@@ -20,6 +20,7 @@
     background-color: #ffffff;
     text-align: center;
     position: relative;
+    user-select: none;
 }
 
 .arrow {
@@ -32,9 +33,7 @@
     animation: bounce 1.5s infinite;
     user-select: none;
     margin-right:10px;
-    background-color: #f0f0f0;
     padding: 15px;
-    border-radius: 1000px;
 }
 
 @keyframes bounce {
