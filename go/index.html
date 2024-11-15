@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Way out | Project Ninjago</title>
+    <script>
+        window.onload = function() {
+            const params = new URLSearchParams(window.location.search);
+            const redirectUrl = params.get('redirect_url');
+
+            if (redirectUrl) {
+                const messageContainer = document.getElementById('message');
+                const leaveButton = document.getElementById('leave');
+                const stayButton = document.getElementById('stay');
+
+                // Set the confirmation message
+                messageContainer.textContent = `Are you sure you want to leave the page?`;
+
+                // Set the leave button to redirect to the URL
+                leaveButton.href = redirectUrl;
+
+                // Handle the stay button
+                stayButton.onclick = function() {
+                    window.history.back(); // Go back to the previous page
+                };
+            } else {
+                // document.location.assign("/")
+            }
+        };
+    </script>
+</head>
+<body>
+    <div>
+        <p id="message"></p>
+        <a id="leave" href="#" style="margin-right: 10px;">Leave</a>
+        <button id="stay">Stay</button>
+    </div>
+</body>
+</html>
