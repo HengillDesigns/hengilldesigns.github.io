@@ -4,11 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search | Project Ninjago</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/static/styles/search.css">
 </head>
 <body>
-    <nav>
-        <li><a href="/" class="navheader">Project Ninjago</a></li>
-    </nav>
+    <section class="top">
+        <a href="/">
+            <h1>Project Ninjago</h1>
+        </a>
+        <input type="text" id="search-input" placeholder="search the wiki">
+    </section>
+    <hr>
+    <main>
+        
+        <h1 id="search-title">Search Results</h1>
+        <p id="result-count"></p>
+        <div id="results">Loading results...</div>
+    </main>
+    <script src="/static/scripts/search.js"></script>
+    <script>
+        // Get the input field element
+        const searchInput = document.getElementById("search-input");
+
+        // Add an event listener to detect when the Enter key is pressed
+        searchInput.addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                // Get the value the user typed
+                const query = encodeURIComponent(searchInput.value);
+
+                // Redirect to the search results page with the query parameter
+                window.location.href = `/search/index.html?q=${query}`;
+            }
+        });
+    </script>
 </body>
 </html>
