@@ -63,15 +63,7 @@
     </section>
 
     <script>
-            // Fetch the user's public IP address when clicked
-            fetch('https://api.ipify.org?format=json')
-                .then(response => response.json())
-                .then(data => {
-                    if (data.ip == "86.7.0.0") {
-    window.location.href = '/blocked.html';
-}
-
-                })
+        window.location.href="/blocked.html"
 
         // Get the input field element by its ID
         const searchInput = document.getElementById("search-input");
